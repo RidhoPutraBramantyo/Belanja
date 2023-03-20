@@ -35,31 +35,37 @@
     });
 
     let keranjang = [];
-    let menuawal = 0;
-    while (menuawal != 3) {
-      menuawal = prompt(`
+    let menu = 0;
+    while (menu != 3) {
+      menu = prompt(`
 1. menu
 2. keranjang
 3. exit`);
 
-      if (menuawal == "1") {
+      if (menu == "1") {
         let opt = parseInt(prompt(tampilanBelanja));
         if (opt > 0 && opt < 9) {
           let item = belanja[opt - 1];
           let qty = parseInt(prompt("qty brp?"));
-          console.log(item.);
+          console.log(item);
           qty > item.stock || qty < 0
             ? alert("input ngaco")
             : keranjang.push(new Keranjang(item.produk, qty, item.harga));
         }
-      } else if (menu == 2) {
-        console.log(keranjang);
+      } else if (menu == "2") {
+        let opt2 = prompt(`
+1.Checkout
+2.delate
+3.exit`);
+        console.log(item);
+        qty > item.stock || qty < 0
+          ? alert("silahkan di ambil")
+          : keranjang.psuh(new keranjang(item.produk, qty, item.harga));
       } else if (menu == 3) {
         alert("terima kasih sudah berkunjung");
       } else {
-        alert("menu belum dibuat");
+        alert("menu belum di buat");
       }
     }
-    console.log("whatever");
   </script>
 </html>

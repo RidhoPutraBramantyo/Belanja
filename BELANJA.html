@@ -41,13 +41,14 @@
 1. menu
 2. keranjang
 3. exit`);
-
+      let tmp = [];
       if (menuawal == "1") {
         let opt = parseInt(prompt(tampilanBelanja));
         if (opt > 0 && opt < 9) {
           let item = belanja[opt - 1];
           let qty = parseInt(prompt("qty brp?"));
-          console.log(item.);
+          console.log(item);
+          item.push(tmp);
           qty > item.stock || qty < 0
             ? alert("input ngaco")
             : keranjang.push(new Keranjang(item.produk, qty, item.harga));
@@ -59,6 +60,7 @@
       } else {
         alert("menu belum dibuat");
       }
+      console.log(tmp);
     }
     console.log("whatever");
   </script>
